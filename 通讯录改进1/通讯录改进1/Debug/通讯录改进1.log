@@ -1,0 +1,6 @@
+﻿  DesContact.c
+  main.c
+D:\1\C学习\鹏哥\通讯录改进1\通讯录改进1\main.c(34,21): warning C4020: “DelContact”: 实参太多
+D:\1\C学习\鹏哥\通讯录改进1\通讯录改进1\main.c(49,14): warning C4013: “DesContact”未定义；假设外部返回 int
+  正在生成代码...
+  通讯录改进1.vcxproj -> D:\1\C学习\鹏哥\通讯录改进1\Debug\通讯录改进1.exe
