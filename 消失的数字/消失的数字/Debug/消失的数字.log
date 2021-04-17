@@ -1,0 +1,4 @@
+﻿  main.c
+D:\1\C学习\力扣刷题\消失的数字\消失的数字\main.c(7,21): warning C4013: “malloc”未定义；假设外部返回 int
+D:\1\C学习\力扣刷题\消失的数字\消失的数字\main.c(21,17): warning C4013: “free”未定义；假设外部返回 int
+  消失的数字.vcxproj -> D:\1\C学习\力扣刷题\消失的数字\Debug\消失的数字.exe
