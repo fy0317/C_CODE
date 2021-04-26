@@ -1,0 +1,14 @@
+#英雄Id
+heroId:1
+#英雄姓名
+heroName:qiyu
+#英雄攻击力
+heroAtk:999999
+#英雄防御力
+heroAtk:999999
+#英雄简介
+heroInfo:wudi
+
+阿达的
+ada
+aaa
