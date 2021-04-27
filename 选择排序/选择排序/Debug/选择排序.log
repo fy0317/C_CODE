@@ -1,0 +1,5 @@
+﻿  main.c
+D:\1\C学习\鹏哥\选择排序\选择排序\main.c(56,22): warning C4013: “malloc”未定义；假设外部返回 int
+D:\1\C学习\鹏哥\选择排序\选择排序\main.c(64,8): warning C4013: “free”未定义；假设外部返回 int
+D:\1\C学习\鹏哥\选择排序\选择排序\main.c(56,1): warning C4047: “初始化”:“char *”与“int”的间接级别不同
+  选择排序.vcxproj -> D:\1\C学习\鹏哥\选择排序\Debug\选择排序.exe
