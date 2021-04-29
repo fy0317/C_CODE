@@ -1,0 +1,5 @@
+﻿  game.c
+  main.c
+D:\1\C学习\鹏哥\扫雷初级版\扫雷初级版\main.c(15,10): warning C4013: “SetBoard”未定义；假设外部返回 int
+  正在生成代码...
+  扫雷初级版.vcxproj -> D:\1\C学习\鹏哥\扫雷初级版\Debug\扫雷初级版.exe
