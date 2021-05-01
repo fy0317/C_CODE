@@ -1,0 +1,7 @@
+﻿  main.c
+  stack.c
+D:\1\C学习\数据结构\栈的顺序结构\栈的顺序结构\stack.c(37,21): warning C4033: “TopStack”必须返回值
+D:\1\C学习\数据结构\栈的顺序结构\栈的顺序结构\stack.c(39,27): warning C4033: “TopStack”必须返回值
+  正在生成代码...
+D:\1\C学习\数据结构\栈的顺序结构\栈的顺序结构\stack.c(41): warning C4715: “TopStack”: 不是所有的控件路径都返回值
+  栈的顺序结构.vcxproj -> D:\1\C学习\数据结构\栈的顺序结构\Debug\栈的顺序结构.exe
