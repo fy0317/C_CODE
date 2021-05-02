@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include"game.h"
-void InitBoard(char board[ROWS][COLS], int row, int col, char c)	//³õÊ¼»¯ÆåÅÌ
+void InitBoard(char board[ROWS][COLS], int row, int col, char c)	//åˆå§‹åŒ–æ£‹ç›˜
 {
 	int i = 0, j = 0;
 	for (i = 0; i < row; i++)
@@ -9,26 +9,26 @@ void InitBoard(char board[ROWS][COLS], int row, int col, char c)	//³õÊ¼»¯ÆåÅÌ
 			board[i][j] = c;
 	}
 }
-void PrintBoard(char board[ROWS][COLS], int row, int col)			//´òÓ¡ÆåÅÌ 
+void PrintBoard(char board[ROWS][COLS], int row, int col)			//æ‰“å°æ£‹ç›˜ 
 {
 	printf("  ");
-	for (int i = 1; i <= row  ; i++)			//´òÓ¡ÁĞ×ø±ê
+	for (int i = 1; i <= row  ; i++)			//æ‰“å°åˆ—åæ ‡
 		printf("%d ", i);
 	printf("\n");
 	for (int i = 1; i <= row; i++)
 	{
-		printf("%d ", i);			//´òÓ¡ºá×ø±ê
+		printf("%d ", i);			//æ‰“å°æ¨ªåæ ‡
 		for (int j = 1; j <= col; j++)
 			printf("%c ", board[i][j]);
 		printf("\n");
 	}
 
 }
-void SetBoard(char board[ROWS][COLS], int row, int col)		//²¼À×
+void SetBoard(char board[ROWS][COLS], int row, int col)		//å¸ƒé›·
 {
 	for (int cnt = 0; cnt < COUNT;)
 	{
-		int x = rand() % row + 1;		//Ëæ»ú²úÉúºá×İ×ø±ê
+		int x = rand() % row + 1;		//éšæœºäº§ç”Ÿæ¨ªçºµåæ ‡
 		int y = rand() % col + 1;
 		if (board[x][y] == '0')
 		{
@@ -37,8 +37,9 @@ void SetBoard(char board[ROWS][COLS], int row, int col)		//²¼À×
 		}
 	}
 }
-int Num(char board[ROWS][COLS],int x,int y)			//Í³¼Æµ±Ç°Î»ÖÃÖÜÎ§ÓĞ¼¸¸öÀ×
+int Num(char board[ROWS][COLS],int x,int y)			//ç»Ÿè®¡å½“å‰ä½ç½®å‘¨å›´æœ‰å‡ ä¸ªé›·
 {
+<<<<<<< HEAD
 	if (x >= 1 && y >= 1)		//·ÀÖ¹Êı×éÔ½½ç
 	return board[x - 1][y - 1] + board[x - 1][y] + board[x - 1][y + 1] +
 		board[x][y - 1] + board[x][y + 1] +
@@ -47,70 +48,80 @@ int Num(char board[ROWS][COLS],int x,int y)			//Í³¼Æµ±Ç°Î»ÖÃÖÜÎ§ÓĞ¼¸¸öÀ×
 int Blank(char board[ROWS][COLS], char ShowBoard[ROWS][COLS], int x, int y)		//ÅĞ¶Ïµ±Ç°Î»ÖÃÖÜÎ§ÊÇ²»ÊÇÃ»ÓĞÀ×
 {
 	 int count = 0;		//Õ¹¿ªµÄ¸ñ×ÓÊı
+=======
+	if (x >= 1 && x <= ROW && y >= 1 && y <= COL)	//é˜²æ­¢æ•°ç»„è¶Šç•Œ
+		return board[x - 1][y - 1] + board[x - 1][y] + board[x - 1][y + 1] +
+			board[x][y - 1] + board[x][y + 1] +
+			board[x + 1][y - 1] + board[x + 1][y] + board[x + 1][y + 1] - 8 * '0';		
+}	
+int Blank(char board[ROWS][COLS], char ShowBoard[ROWS][COLS], int x, int y)		//åˆ¤æ–­å½“å‰ä½ç½®å‘¨å›´æ˜¯ä¸æ˜¯æ²¡æœ‰é›·
+{
+	 int count = 0;		//å±•å¼€çš„æ ¼å­æ•°
+>>>>>>> b8cbb3e7b007ae1b82e23def3b03f1129a1e65ae
 	for (int i = x - 1; i <= x + 1 && i >=0 && i <= ROW; i++)
 	{
 		for (int j = y - 1; j <= y + 1 && j >=0 && j <=COL; j++)
 		{
-			if (i == x && j == y)		//Ìø¹ı×ø±êÎª£¨x£¬y£©µÄÎ»ÖÃ
+			if (i == x && j == y)		//è·³è¿‡åæ ‡ä¸ºï¼ˆxï¼Œyï¼‰çš„ä½ç½®
 				;
-			else if (ShowBoard[i][j] == '*' && board[i][j] != '1')		//Èç¹û×ø±ê(i,j)´¦Ã»ÓĞ±»³õÊ¼»¯²¢ÇÒ²»ÎªÀ×£¬ÅĞ¶ÏÆäÖÜÎ§ÓĞÃ»ÓĞÀ×
-			{															//Èç¹ûÖÜÎ§Ò²Ã»ÓĞÀ×£¬½«ÆäÕ¹¿ª	
+			else if (ShowBoard[i][j] == '*' && board[i][j] != '1')		//å¦‚æœåæ ‡(i,j)å¤„æ²¡æœ‰è¢«åˆå§‹åŒ–å¹¶ä¸”ä¸ä¸ºé›·ï¼Œåˆ¤æ–­å…¶å‘¨å›´æœ‰æ²¡æœ‰é›·
+			{															//å¦‚æœå‘¨å›´ä¹Ÿæ²¡æœ‰é›·ï¼Œå°†å…¶å±•å¼€	
 				int cnt = Num(board, i, j);                                                                               
 				if (cnt == 0)
 				{
 					ShowBoard[i][j] = ' ';
-					count += Blank(board, ShowBoard, i, j);				//¼ÌĞøÅĞ¶ÏÕâ¸ö×ø±êÖÜÎ§µÄÎ»ÖÃÊÇ·ñĞèÒªÕ¹¿ª
+					count += Blank(board, ShowBoard, i, j);				//ç»§ç»­åˆ¤æ–­è¿™ä¸ªåæ ‡å‘¨å›´çš„ä½ç½®æ˜¯å¦éœ€è¦å±•å¼€
 				}
 				else ShowBoard[i][j] = cnt + '0';
-				if (i >= 1 && i <= ROW && j >= 1 && j <= COL)		//µ±Õ¹¿ªµÄ¸ñ×ÓÔÚÓĞĞ§ÆåÅÌ·¶Î§ÄÚÊ±£¬count++
+				if (i >= 1 && i <= ROW && j >= 1 && j <= COL)		//å½“å±•å¼€çš„æ ¼å­åœ¨æœ‰æ•ˆæ£‹ç›˜èŒƒå›´å†…æ—¶ï¼Œcount++
 					count++;
 			}
 		}
 	}
-	return count;		//×Ü¹²Õ¹¿ªÁË¶àÉÙ¸ö¸ñ×Ó
+	return count;		//æ€»å…±å±•å¼€äº†å¤šå°‘ä¸ªæ ¼å­
 }
-void FindBoard(char board[ROWS][COLS],char ShowBoard[ROWS][COLS],int row, int col)			//ÅÅÀ×
+void FindBoard(char board[ROWS][COLS],char ShowBoard[ROWS][COLS],int row, int col)			//æ’é›·
 {
 	int cnt = ROW * COL - COUNT;
-	int time = 1;		//timeÎª1Ê±±íÊ¾ÊÇµÚÒ»²½
+	int time = 1;		//timeä¸º1æ—¶è¡¨ç¤ºæ˜¯ç¬¬ä¸€æ­¥
 	int over = 0;
 	//PrintBoard(board, row, col);
 	while (1)		
 	{
-		printf("ÇëÑ¡Ôñ-> \n1¡¢ÅÅÀ×   2¡¢±ê¼Ç\n");
+		printf("è¯·é€‰æ‹©-> \n1ã€æ’é›·   2ã€æ ‡è®°\n");
 		int choose = 0;
 		scanf("%d", &choose);
 		switch (choose)
 		{
 		case 1:
-			while (1)		//ÅÅÀ×Ñ­»·
+			while (1)		//æ’é›·å¾ªç¯
 			{
-				printf("ÇëÊäÈëÅÅÀ×µÄ×ø±ê\n");
+				printf("è¯·è¾“å…¥æ’é›·çš„åæ ‡\n");
 				int x = 0;
 				int y = 0;
 				scanf("%d%d", &x, &y);
 				if (x < 1 || x >row || y < 1 || y > col)
 				{
-					printf("×ø±ê·Ç·¨£¬ÇëÖØĞÂÊäÈë\n");
+					printf("åæ ‡éæ³•ï¼Œè¯·é‡æ–°è¾“å…¥\n");
 				}
 				else
 				{
 					if (board[x][y] == '1')
 					{
-						if (time) //Èç¹ûµÚÒ»´Î¾ÍÓö¼ûÀ×,ÔòÖØÖÃÕâ¸öÀ×µÄÎ»ÖÃ
+						if (time) //å¦‚æœç¬¬ä¸€æ¬¡å°±é‡è§é›·,åˆ™é‡ç½®è¿™ä¸ªé›·çš„ä½ç½®
 						{
 							board[x][y] = '0';
-							while (1)		//ÖØÖÃµÚÒ»´ÎÀ×µÄÎ»ÖÃ
+							while (1)		//é‡ç½®ç¬¬ä¸€æ¬¡é›·çš„ä½ç½®
 							{
 								int x1 = rand() % row + 1;
 								int y1 = rand() % col + 1;
 								if (board[x1][y1] == '0')
 								{
 									board[x1][y1] = '1';
-									break;		//Ìø³öÖØÖÃµÚÒ»´ÎÀ×µÄÑ­»·
+									break;		//è·³å‡ºé‡ç½®ç¬¬ä¸€æ¬¡é›·çš„å¾ªç¯
 								}
 							}
-							time = 0;	//timeÖÃÎª0±íÊ¾²»ÊÇµÚÒ»´Î
+							time = 0;	//timeç½®ä¸º0è¡¨ç¤ºä¸æ˜¯ç¬¬ä¸€æ¬¡
 							if (0 == Num(board, x, y))
 							{
 								ShowBoard[x][y] = ' ';
@@ -120,15 +131,19 @@ void FindBoard(char board[ROWS][COLS],char ShowBoard[ROWS][COLS],int row, int co
 							int count = Blank(board, ShowBoard, x, y);
 							cnt -= count;
 							PrintBoard(ShowBoard, row, col);
-							goto end;		//µÚÒ»´ÎÅÅµ½À×£¬ÅĞ¶ÏÊÇ·ñÅÅÍê
+							goto end;		//ç¬¬ä¸€æ¬¡æ’åˆ°é›·ï¼Œåˆ¤æ–­æ˜¯å¦æ’å®Œ
 						}
-						else		//²»ÊÇµÚÒ»´Î
+						else		//ä¸æ˜¯ç¬¬ä¸€æ¬¡
 						{
 							over = 1;
-							break;	//Ìø³öÅÅÀ×Ñ­»·
+							break;	//è·³å‡ºæ’é›·å¾ªç¯
 						}
 					}
+<<<<<<< HEAD
 					else if (board[x][y] == '0'&& ShowBoard[x][y] == '*')
+=======
+					else if (board[x][y] == '0' && ShowBoard[x][y] == '*')
+>>>>>>> b8cbb3e7b007ae1b82e23def3b03f1129a1e65ae
 					{
 						time = 0;
 						if (0 == Num(board, x, y))
@@ -140,46 +155,46 @@ void FindBoard(char board[ROWS][COLS],char ShowBoard[ROWS][COLS],int row, int co
 						int count = Blank(board, ShowBoard, x, y);
  						cnt -= count;
 						PrintBoard(ShowBoard, row, col);
-						break;		//Ìø³öÅÅÀ×Ñ­»·
+						break;		//è·³å‡ºæ’é›·å¾ªç¯
 					}
 				}
 			}
-			break;		//Ìø³öswitch
+			break;		//è·³å‡ºswitch
 		case 2:
-			printf("ÇëÊäÈë±ê¼ÇµÄ×ø±ê\n");
-			while (1)	//±ê¼ÇÑ­»·
+			printf("è¯·è¾“å…¥æ ‡è®°çš„åæ ‡\n");
+			while (1)	//æ ‡è®°å¾ªç¯
 			{
 				int x1 = 0;
 				int y1 = 0;
 				scanf("%d%d", &x1, &y1);
 				if (x1< 1 || x1>row || y1<1 || y1>col)
-					printf("×ø±êÔ½½ç£¬ÇëÖØĞÂÊäÈë\n");
+					printf("åæ ‡è¶Šç•Œï¼Œè¯·é‡æ–°è¾“å…¥\n");
 				else if (ShowBoard[x1][y1] != '*')
-					printf("´Ë´¦×ø±êÒÑÅÅ²é¹ı,ÇëÖØĞÂÊäÈë\n");
+					printf("æ­¤å¤„åæ ‡å·²æ’æŸ¥è¿‡,è¯·é‡æ–°è¾“å…¥\n");
 				else if (ShowBoard[x1][y1] == '*')
 				{
 					ShowBoard[x1][y1] = '#';
 					PrintBoard(ShowBoard, row, col);
-					break;		//Ìø³ö±ê¼ÇÑ­»·
+					break;		//è·³å‡ºæ ‡è®°å¾ªç¯
 				}
 			}
-			break;		//Ìø³öswitch
+			break;		//è·³å‡ºswitch
 		default:
-			printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë\n");
-			break;	//Ìø³öswitch
+			printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥\n");
+			break;	//è·³å‡ºswitch
 		}
 		end :
 		if (over)
 		{
-			printf("ÄãÊ§°ÜÁË£¬ÓÎÏ·½áÊø\n");
+			printf("ä½ å¤±è´¥äº†ï¼Œæ¸¸æˆç»“æŸ\n");
 			PrintBoard(board, row, col);
-			break;		//ÓÎÏ·½áÊø
+			break;		//æ¸¸æˆç»“æŸ
 		}
 		if (cnt == 0)
 		{
-			printf("¹§Ï²Äã£¬³É¹¦ÅÅÀ×\n");
+			printf("æ­å–œä½ ï¼ŒæˆåŠŸæ’é›·\n");
 			PrintBoard(board, row, col);
-			break;		//ÓÎÏ·½áÊø
+			break;		//æ¸¸æˆç»“æŸ
 		}
 	}
 }

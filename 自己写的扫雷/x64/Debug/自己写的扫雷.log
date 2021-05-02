@@ -1,0 +1,13 @@
+﻿  game.c
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\game.c(17,24): warning C4028: 形参 1 与声明不同
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\game.c(36,19): warning C4028: 形参 1 与声明不同
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\game.c(41,15): warning C4013: “rand”未定义；假设外部返回 int
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\game.c(108,20): warning C4028: 形参 1 与声明不同
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\game.c(108,42): warning C4028: 形参 2 与声明不同
+  test.c
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\test.c(12,19): warning C4048: “char (*)[3]”和“char [5][5]”数组的下标不同
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\test.c(13,14): warning C4048: “char (*)[3]”和“char [5][5]”数组的下标不同
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\test.c(15,15): warning C4048: “char (*)[3]”和“char [5][5]”数组的下标不同
+D:\3\QQ\1269083931\FileRecv\自己写的扫雷\test.c(15,20): warning C4048: “char (*)[3]”和“char [5][5]”数组的下标不同
+  正在生成代码...
+  自己写的扫雷.vcxproj -> D:\3\QQ\1269083931\FileRecv\自己写的扫雷\x64\Debug\自己写的扫雷.exe

@@ -1,0 +1,6 @@
+﻿  game.c
+C:\Users\86189\source\repos\自己写的扫雷\game.c(41,15): warning C4013: “rand”未定义；假设外部返回 int
+C:\Users\86189\source\repos\自己写的扫雷\game.c(65,38): warning C4048: “char (*)[9]”和“char (*)[11]”数组的下标不同
+C:\Users\86189\source\repos\自己写的扫雷\game.c(127,24): warning C4048: “char (*)[11]”和“char (*)[9]”数组的下标不同
+C:\Users\86189\source\repos\自己写的扫雷\game.c(127,30): warning C4048: “char (*)[11]”和“char (*)[9]”数组的下标不同
+  自己写的扫雷.vcxproj -> C:\Users\86189\source\repos\自己写的扫雷\Debug\自己写的扫雷.exe
