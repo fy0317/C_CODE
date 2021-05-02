@@ -5,8 +5,8 @@
 #include<time.h>
 #define ROW 9		//有效棋盘行数
 #define COL 9		//有效棋盘列数
-#define ROWS ROW+4	//实际棋盘行数
-#define COLS COL+4	//实际棋盘列数	   
+#define ROWS ROW+2	//实际棋盘行数
+#define COLS COL+2	//实际棋盘列数	   
 #define COUNT 1	//地雷的数目
 void InitBoard(char board[ROWS][COLS], int row, int col, char c);	//初始化棋盘
 void PrintBoard(char board[ROWS][COLS], int row, int col);			//打印棋盘 

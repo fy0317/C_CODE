@@ -39,6 +39,7 @@ void SetBoard(char board[ROWS][COLS], int row, int col)		//布雷
 }
 int Num(char board[ROWS][COLS],int x,int y)			//统计当前位置周围有几个雷
 {
+	if (x >= 1 && y >= 1)		//防止数组越界
 	return board[x - 1][y - 1] + board[x - 1][y] + board[x - 1][y + 1] +
 		board[x][y - 1] + board[x][y + 1] +
 		board[x + 1][y - 1] + board[x + 1][y] + board[x + 1][y + 1] - 8 * '0';		
@@ -46,7 +47,7 @@ int Num(char board[ROWS][COLS],int x,int y)			//统计当前位置周围有几个雷
 int Blank(char board[ROWS][COLS], char ShowBoard[ROWS][COLS], int x, int y)		//判断当前位置周围是不是没有雷
 {
 	 int count = 0;		//展开的格子数
-	for (int i = x - 1; i <= x + 1 && i >=0 && i <= ROW+1; i++)
+	for (int i = x - 1; i <= x + 1 && i >=0 && i <= ROW; i++)
 	{
 		for (int j = y - 1; j <= y + 1 && j >=0 && j <=COL; j++)
 		{
@@ -127,7 +128,7 @@ void FindBoard(char board[ROWS][COLS],char ShowBoard[ROWS][COLS],int row, int co
 							break;	//跳出排雷循环
 						}
 					}
-					else if (board[x][y] == '0')
+					else if (board[x][y] == '0'&& ShowBoard[x][y] == '*')
 					{
 						time = 0;
 						if (0 == Num(board, x, y))
