@@ -1,0 +1,4 @@
+﻿  main.c
+D:\1\C学习\C和指针\1_1\1_1\main.c(18,13): warning C4013: “gets”未定义；假设外部返回 int
+D:\1\C学习\C和指针\1_1\1_1\main.c(18,28): warning C4047: “!=”:“int”与“void *”的间接级别不同
+  1_1.vcxproj -> D:\1\C学习\C和指针\1_1\Debug\1_1.exe
