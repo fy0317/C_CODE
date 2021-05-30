@@ -1,0 +1,4 @@
+﻿  qsort.c
+D:\1\C学习\鹏哥\qsort_5_30\qsort_5_30\qsort.c(20,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\1\C学习\鹏哥\qsort_5_30\qsort_5_30\qsort.c(22,21): warning C4018: “<”: 有符号/无符号不匹配
+  qsort_5_30.vcxproj -> D:\1\C学习\鹏哥\qsort_5_30\Debug\qsort_5_30.exe
