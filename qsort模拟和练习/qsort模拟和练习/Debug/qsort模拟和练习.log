@@ -1,0 +1,7 @@
+﻿  main.c
+D:\1\C学习\鹏哥\qsort模拟和练习\qsort模拟和练习\main.c(33,25): warning C4133: “函数”: 从“float [7]”到“const int *”的类型不兼容
+D:\1\C学习\鹏哥\qsort模拟和练习\qsort模拟和练习\main.c(23,1): warning C4305: “初始化”: 从“double”到“float”截断
+D:\1\C学习\鹏哥\qsort模拟和练习\qsort模拟和练习\main.c(98,33): warning C4028: 形参 1 与声明不同
+D:\1\C学习\鹏哥\qsort模拟和练习\qsort模拟和练习\main.c(106,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\1\C学习\鹏哥\qsort模拟和练习\qsort模拟和练习\main.c(108,21): warning C4018: “<”: 有符号/无符号不匹配
+  qsort模拟和练习.vcxproj -> D:\1\C学习\鹏哥\qsort模拟和练习\Debug\qsort模拟和练习.exe
