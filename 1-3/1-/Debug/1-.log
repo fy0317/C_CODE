@@ -1,0 +1,3 @@
+﻿D:\1\VS2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(1-.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  main.c
+  1-.vcxproj -> D:\1\C学习\数据结构\课后练习\第三章\1-\Debug\1-2.exe
