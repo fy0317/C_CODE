@@ -1,0 +1,7 @@
+﻿  main.c
+D:\1\C学习\鹏哥\6_12\6_12\main.c(26,3): warning C4033: “my_strcmp”必须返回值
+D:\1\C学习\鹏哥\6_12\6_12\main.c(73,33): warning C4090: “return”: 不同的“const”限定符
+D:\1\C学习\鹏哥\6_12\6_12\main.c(112,45): warning C4090: “return”: 不同的“const”限定符
+D:\1\C学习\鹏哥\6_12\6_12\main.c(38): warning C4715: “my_strcmp”: 不是所有的控件路径都返回值
+D:\1\C学习\鹏哥\6_12\6_12\main.c(118): warning C4716: “my_memmove”: 必须返回一个值
+  6_12.vcxproj -> D:\1\C学习\鹏哥\6_12\Debug\6_12.exe
